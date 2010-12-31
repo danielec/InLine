@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Test all The InLine Fields</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.3.0/mootools-yui-compressed.js"></script>
+
+<script type="text/javascript" src="../Source/InLine.Common.js"></script>
+<script type="text/javascript" src="../Source/InLine.Select.js"></script>
+<script type="text/javascript" src="../Source/InLine.TextField.js"></script>
+<script type="text/javascript" src="../Source/InLine.Password.js"></script>
+<script type="text/javascript" src="../Source/InLine.CheckBox.js"></script>
+<script type="text/javascript" src="../Source/InLine.RadioList.js"></script>
+<script type="text/javascript" src="../Source/InLine.TextArea.js"></script>
+<script type="text/javascript">
+	var uinterfaces = [];
+	window.addEvent('domready', function(){
+		var list = {
+			'0': '',
+			'1': 'Uno',
+			'2': 'Two',
+			'3': 'Drei',
+			'4': 'Quatre'
+		};
+		
+		uinterfaces.push(new InLine.Select('SelectExample', {
+			'list': list,
+			'name': 'TheSelect'
+		}));
+		
+		uinterfaces.push(new InLine.TextField('TextExample', {
+			'name': 'TheTextField'
+		}));
+		
+		uinterfaces.push(new InLine.Password('PasswordExample', {
+			'name': 'ThePassword'
+		}));
+		
+		uinterfaces.push(new InLine.CheckBox('CheckboxExample', {
+			'name': 'TheCheckbox',
+			'checkedValue': 'Turned On',
+			'uncheckedValue': 'Turned Off',
+			'value': 'on'
+		}));
+		
+		list = {
+			'a': 'Apple',
+			'b': 'Banana',
+			'c': 'Chili Pepper',
+			'd': 'Durian'
+		};
+		
+		uinterfaces.push(new InLine.RadioList('RadioExample', {
+			'list': list,
+			'name': 'TheRadios'
+		}));
+		
+		uinterfaces.push(new InLine.TextArea('TextAreaExample', {
+			'name': 'TheTextArea'
+		}));
+		
+		$('TheLink').addEvent('click', function(e){
+			e.stop();
+			uinterfaces.each(function(el){
+				el.stopEditField();				
+			});
+		});
+		
+		$('TheValue').addEvent('click', function(e){
+			e.stop();
+			var text = "";
+			uinterfaces.each(function(el){
+				text += el.getValue() + "\n";				
+			});
+			alert(text);
+		});
+	});
+
+</script>
+</head>
+<body>
+<table width="100%">
+	<tr>
+		<th>Select: </th>
+		<td id="SelectExample"></td>		
+	</tr>
+	<tr>
+		<th>TextField: </th>
+		<td id="TextExample"></td>		
+	</tr>
+	<tr>
+		<th>Password: </th>
+		<td id="PasswordExample"></td>		
+	</tr>
+	<tr>
+		<th>Checkbox: </th>
+		<td id="CheckboxExample"></td>		
+	</tr>
+	<tr>
+		<th>Radio: </th>
+		<td id="RadioExample"></td>		
+	</tr>
+	<tr>
+		<th>Textarea: </th>
+		<td id="TextAreaExample"></td>		
+	</tr>
+	<tr>
+		<th>
+			<a href="#" id = "TheLink">Done</a>
+		</th>
+		<th>
+			<a href="#" id = "TheValue">Values</a>
+		</th>
+	</tr>
+</table>
+</body>
+</html>
