@@ -1,7 +1,7 @@
-name: InLine
-author: Daniele Corti
-category: Forms
-tags: [inline, form, interface]
-demo: https://sites.google.com/site/jsplugin/projects/inline/demo---inline
-docs: https://sites.google.com/site/jsplugin/projects/inline
-current: 1.0beta
+name:  InLine
+author:  Daniele Corti
+category:  Forms
+tags:  [inline, form, interface]
+demo:  https://sites.google.com/site/jsplugin/projects/inline/demo---inline
+docs:  https://sites.google.com/site/jsplugin/projects/inline
+current: 1.0b
