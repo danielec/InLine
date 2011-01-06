@@ -1,7 +1,7 @@
 name: InLine
 author: danielec
 category: Forms
-tags: [inline, form]
+tags: [inline, form, interface]
 demo: https://sites.google.com/site/jsplugin/projects/inline/demo---inline
 docs: https://sites.google.com/site/jsplugin/projects/inline
-current: 1.0
+current: 1.0beta
